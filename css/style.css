@@ -1,0 +1,18 @@
+html, body {
+	background-color: #AD0170;
+	margin:0;
+	padding: 0;
+	overflow: hidden;
+	font-family: arial;
+}
+
+canvas {
+    position: relative;
+    top:0;
+    left:0;
+}
+
+button {
+	z-index: 1000 !important;
+	top:0;
+}
