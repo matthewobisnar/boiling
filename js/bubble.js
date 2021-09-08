@@ -74,12 +74,3 @@ class Bubble {
     }
 
 }
-
-// var bubble = new Bubble();
-
-// bubble.update();
-// bubble.draw();
-
-// https://codepen.io/Capse/pen/xVMObM
-
-
