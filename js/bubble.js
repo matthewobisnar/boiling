@@ -3,17 +3,17 @@ class Bubble {
 
     constructor(color = '', y = 3.3) {
 
-        this.r = this.random(5, 20);
-        this.x  = this.random((window.innerWidth/2), (window.innerWidth/2));
-        this.y  = this.random(window.innerHeight/3, window.innerHeight/2);
-        this.alpha = 1;
+        this.r      = this.random(5, 20);
+        this.x      = this.random((window.innerWidth/2), (window.innerWidth/2));
+        this.y      = this.random(window.innerHeight/3, window.innerHeight/2);
+        this.alpha  = 1;
         this.colors = ["rgba(255, 255, 255, 0.5)", "#ffffff"];
 
-        this.c = color;
-        this.vx = this.random(-3, 3);
-        this.vy = this.random(.1, .5) + y;
-        this.vr = 0;
-        this.life = true;
+        this.c      = color;
+        this.vx     = this.random(-3, 3);
+        this.vy     = this.random(.1, .5) + y;
+        this.vr     = 0;
+        this.life   = true;
 
     }
 
