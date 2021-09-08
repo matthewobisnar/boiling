@@ -1,13 +1,25 @@
 html, body {
-	background-color: #AD0170;
+	background-color: #0195ad;
 	margin:0;
 	padding: 0;
 	overflow: hidden;
 	font-family: arial;
 }
 
+.circle {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
 canvas {
-    position: relative;
+    position: absolute;
     top:0;
     left:0;
 }

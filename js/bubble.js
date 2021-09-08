@@ -1,22 +1,20 @@
 
 class Bubble {
 
-    constructor(color = 'rgba(255, 255, 255, 0.5)', y = 3.3) {
+    constructor(color = '', y = 3.3) {
 
-        this.r = this.random(20, 10);
-        this.x  = this.random(window.innerWidth /2, window.innerWidth /2);
-        this.y  = this.random((window.innerHeight/3), (window.innerHeight/2 + 7));
+        this.r = this.random(5, 20);
+        this.x  = this.random((window.innerWidth/2), (window.innerWidth/2));
+        this.y  = this.random(window.innerHeight/3, window.innerHeight/2);
         this.alpha = 1;
-        // this.c = "rgba(255, 255, 255,"+ this.alpha +")";
+        this.colors = ["rgba(255, 255, 255, 0.5)", "#ffffff"];
+
+        this.c = color;
         this.vx = this.random(-3, 3);
         this.vy = this.random(.1, .5) + y;
         this.vr = 0;
         this.life = true;
 
-        this.gravity = 0.05;
-        this.gravitySpeed = 0;
-        this.hitBottom = false;
-        
     }
 
     startUpdate() {
@@ -34,17 +32,16 @@ class Bubble {
         if (this.r <= 1) {
             this.life = false;
         }
-
     }
 
-    stopUpdate() {
-        this.y += this.vy;
+    randomColor() {
+        return this.colors[Math.floor(Math.random()*this.colors.length)];
     }
 
     draw(ctx) {
         ctx.beginPath();	
 		ctx.arc( this.x, this.y, this.r, 0, 2*Math.PI );
-		ctx.fillStyle = "rgba(255, 255, 255,"+ this.alpha +")";
+		ctx.fillStyle = this.c;
 		ctx.fill();
     }
 
