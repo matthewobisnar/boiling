@@ -19,10 +19,10 @@ class Bubble {
 
     startUpdate() {
 
-        this.vx += .012;
-        this.vr += .07;
-        this.y  -= this.vy;
-	this.x  += this.vx;
+        this.vx    += .012;
+        this.vr    += .07;
+        this.y     -= this.vy;
+	this.x     += this.vx;
         this.alpha -= 0.05;
 
 	if (this.r > 1) {
