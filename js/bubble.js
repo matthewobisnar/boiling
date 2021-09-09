@@ -49,7 +49,7 @@ class Bubble {
      * 
      * @returns {boolean}
      */
-    getLife(){
+    getLife() {
         return this.life;
     }
 
