@@ -21,11 +21,11 @@ class Bubble {
 
         this.vx += .012;
         this.vr += .07;
-        this.y -= this.vy;
-		this.x += this.vx;
+        this.y  -= this.vy;
+	this.x  += this.vx;
         this.alpha -= 0.05;
 
-		if ( this.r > 1 ) {
+	if (this.r > 1) {
             this.r -= this.vr;
         }
 
@@ -40,9 +40,9 @@ class Bubble {
 
     draw(ctx) {
         ctx.beginPath();	
-		ctx.arc( this.x, this.y, this.r, 0, 2*Math.PI );
-		ctx.fillStyle = this.c;
-		ctx.fill();
+	ctx.arc( this.x, this.y, this.r, 0, 2*Math.PI );
+	ctx.fillStyle = this.c;
+	ctx.fill();
     }
 
     /**
